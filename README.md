@@ -1,9 +1,9 @@
-# AutoVerdict
+# MiProximoCarro
 
 **Compra el carro, no la promesa.** La plataforma que le dice a un comprador colombiano la verdad completa sobre un carro antes de pagarlo: qué tan grande es en la realidad, cuánto cuesta de verdad tenerlo (puesta en calle, crédito, seguro, combustible, mantenimiento, reventa) y qué se le suele dañar.
 
-- 307 versiones de 18 marcas (2018–2026), con reseña honesta por versión.
-- Comparador de hasta 10 autos con ganador automático por fila, marcador, Puntaje AutoVerdict por perfil y siluetas SVG a escala (lateral, planta y frontal) con Índice Rompemuelle e Índice de Garaje.
+- 2.089 versiones de 26 marcas (2000–2026), con reseña honesta por versión.
+- Comparador de hasta 10 autos con ganador automático por fila, marcador, Puntaje MiProximoCarro por perfil y siluetas SVG a escala (lateral, planta y frontal) con Índice Rompemuelle e Índice de Garaje.
 - Motor financiero colombiano: SOAT 2026, matrícula, impuesto vehicular proporcional, crédito (cuota fija, balón, abonos), seguro todo riesgo por rango, costo total de propiedad, reventa y "¿qué carro me alcanza?".
 - Reviews con fallas documentadas (dos o más fuentes), recalls, checklist de usado y alternativas.
 
@@ -12,8 +12,8 @@
 Requisitos: Python 3.12 y Node 20 o superior.
 
 ```bash
-git clone https://github.com/ingsamuelorozco/AutoVerdict.git
-cd AutoVerdict
+git clone https://github.com/ingsamuelorozco/MiProximoCarro.git
+cd MiProximoCarro
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r backend/requirements.txt
 python scripts/seed.py              # opcional: db/cars.db ya viene generada
