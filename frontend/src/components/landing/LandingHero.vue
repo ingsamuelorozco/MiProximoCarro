@@ -44,7 +44,7 @@ const EXTRA: Record<DatoExtra, (d: Ficha) => [string, string]> = {
   consumo: (d) => ['Consumo real estimado', f.consumo(d.costo.consumo.consumo_real_estimado_kml)],
   autonomia: (d) => ['Autonomía', `${formatoNumero(d.costo.consumo.autonomia_estimada_km)} km por carga`],
   traccion: (d) => ['Tracción', `${d.especificaciones.chasis.traccion} · 0 a 100 en ${formatoNumero(d.especificaciones.motor.aceleracion_0_100_seg, 1)} s`],
-  fiabilidad: (d) => ['Fiabilidad AutoVerdict', `${formatoNumero(d.fiabilidad.puntaje, 1)} de 10 · ${d.fiabilidad.etiqueta}`],
+  fiabilidad: (d) => ['Fiabilidad MiProximoCarro', `${formatoNumero(d.fiabilidad.puntaje, 1)} de 10 · ${d.fiabilidad.etiqueta}`],
   baul: (d) => ['Baúl', `${formatoNumero(d.tamano.medidas.capacidad_baul_litros)} litros`],
 }
 const puntos = computed(() => {

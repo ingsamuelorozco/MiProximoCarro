@@ -34,7 +34,7 @@ export interface Tarjeta {
   diametro_rueda_mm: number
   indice_garaje_etiqueta: string
   indice_rompemuelle_etiqueta: string
-  puntaje_autoverdict_base: number | null
+  puntaje_miproximocarro_base: number | null
   pais_origen: string
   fecha_precio: string
 }

@@ -1,6 +1,6 @@
 /** Textos de la interfaz centralizados (español de Colombia). */
 export const T = {
-  marca: 'AutoVerdict',
+  marca: 'MiProximoCarro',
   lema: 'Compra el carro, no la promesa',
   sublema: 'Tamaño real, costo real en Colombia y lo que se le suele dañar. Antes de pagar.',
   nav: {
@@ -55,7 +55,7 @@ export const T = {
         { titulo: 'Fallas documentadas', texto: 'Cada falla conocida se respalda con dos o más fuentes públicas, junto con recalls y checklist de usado.' },
       ],
       derecha: [
-        { titulo: 'Comparador de hasta 10', texto: 'Ganador automático por fila, marcador y Puntaje AutoVerdict según tu perfil de uso, lado a lado.' },
+        { titulo: 'Comparador de hasta 10', texto: 'Ganador automático por fila, marcador y Puntaje MiProximoCarro según tu perfil de uso, lado a lado.' },
         { titulo: 'Precios en COP y USD', texto: 'Precio puesto en calle por ciudad, con la TRM oficial o la que tú definas en los ajustes.' },
         { titulo: '¿Qué carro me alcanza?', texto: 'Cruza tus ingresos con el costo mensual real y te muestra lo que puedes sostener sin ahogarte.' },
       ],
@@ -73,5 +73,5 @@ export const T = {
   errorCarga: 'No pudimos cargar la información.',
   reintentar: 'Reintentar',
   sinConexion: 'Estás sin conexión. Mostramos lo último que cargó.',
-  repo: 'https://github.com/ingsamuelorozco/AutoVerdict',
+  repo: 'https://github.com/ingsamuelorozco/MiProximoCarro',
 }

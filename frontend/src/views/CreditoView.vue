@@ -35,7 +35,7 @@ function csv() {
   if (!r.value?.tabla) return
   const filas = [['mes', 'cuota', 'interes', 'capital', 'abono', 'seguros', 'saldo'], ...r.value.tabla.map((t: any) => [t.mes, t.cuota_cop, t.interes_cop, t.capital_cop, t.abono_cop, t.seguros_cop, t.saldo_cop])]
   const url = URL.createObjectURL(new Blob([filas.map((x) => x.join(';')).join('\n')], { type: 'text/csv;charset=utf-8' }))
-  const a = document.createElement('a'); a.href = url; a.download = 'amortizacion-autoverdict.csv'; a.click(); URL.revokeObjectURL(url)
+  const a = document.createElement('a'); a.href = url; a.download = 'amortizacion-miproximocarro.csv'; a.click(); URL.revokeObjectURL(url)
 }
 </script>
 

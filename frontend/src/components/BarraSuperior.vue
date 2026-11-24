@@ -41,7 +41,7 @@ const ciudadNombre = computed(() => aj.ciudades.find((c) => c.id === aj.ciudad)?
   <header :class="['sobre-foto top-0 z-40 w-full', enInicio ? 'absolute inset-x-0 bg-transparent' : 'sticky bg-velo']">
     <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:bg-tinta focus:px-3 focus:py-2 focus:text-papel">Saltar al contenido</a>
     <div class="flex h-barra items-stretch pl-4 lg:pl-6">
-      <RouterLink to="/" class="mr-8 flex shrink-0 min-[1440px]:mr-10 items-center gap-2.5 text-xl font-bold uppercase tracking-[0.5px] text-tinta" aria-label="AutoVerdict, inicio">
+      <RouterLink to="/" class="mr-8 flex shrink-0 min-[1440px]:mr-10 items-center gap-2.5 text-xl font-bold uppercase tracking-[0.5px] text-tinta" aria-label="MiProximoCarro, inicio">
         <img src="/favicon.svg" alt="" class="h-[30px] w-[30px]" width="30" height="30" />
         <span>{{ T.marca }}</span>
       </RouterLink>

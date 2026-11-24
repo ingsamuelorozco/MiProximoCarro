@@ -37,7 +37,7 @@ const NOMBRES: Record<string, string> = { motor_transmision: 'Motor y transmisi�
           <li><strong>Altura:</strong> pérdida de {{ f.pct(m[0].altura.perdida_por_1000m['Atmosférico']) }} por cada 1.000 m en atmosféricos, {{ f.pct(m[0].altura.perdida_por_1000m.Turbo) }} en turbo y 0% en eléctricos.</li>
           <li><strong>Índice Rompemuelle:</strong> despeje con penalización por voladizo largo; ≥ 200 mm «pasa sin problema», 170–199 «con cuidado», 150–169 «precaución», &lt; 150 «riesgo de raspar». Con carga restamos {{ m[0].indices.rompemuelle.caida_con_carga_mm }} mm.</li>
           <li><strong>Índice de Garaje:</strong> contra una plaza de 5,00 × 2,40 m: holgado, justo, apretado o no cabe según largo y ancho con espejos.</li>
-          <li><strong>Puntaje AutoVerdict (0–100):</strong> cada dimensión se normaliza entre los autos comparados y se pondera según el perfil de uso; una alerta roja resta 35% del puntaje.</li>
+          <li><strong>Puntaje MiProximoCarro (0–100):</strong> cada dimensión se normaliza entre los autos comparados y se pondera según el perfil de uso; una alerta roja resta 35% del puntaje.</li>
         </ul>
         <h2 class="mt-16 border-t border-linea pt-8 text-display-sm">Límites de la plataforma</h2>
         <p class="mt-3">No es una cotización, ni una oferta de crédito, ni asesoría financiera. Las siluetas son esquemáticas y proporcionales, no el diseño real. Las reviews son opinión editorial basada en fuentes públicas citadas, no un diagnóstico mecánico de un vehículo en particular. Las reglas de pico y placa y las tarifas de matrícula fuera de Bogotá son ilustrativas: verifica la norma vigente de tu ciudad.</p>

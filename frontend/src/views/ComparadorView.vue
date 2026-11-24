@@ -165,7 +165,7 @@ const puntajeDe = (id: number) => datos.value?.puntajes.find((p) => p.id === id)
     <template v-if="datos && v.length >= 2">
       <!-- Marcador -->
       <section class="mt-20" aria-labelledby="marcador">
-        <h2 id="marcador" class="text-display-sm">Marcador y Puntaje AutoVerdict</h2>
+        <h2 id="marcador" class="text-display-sm">Marcador y Puntaje MiProximoCarro</h2>
         <div class="mt-8 flex snap-x gap-6 overflow-x-auto pb-2">
           <div v-for="(x, i) in v" :key="x.id" class="celda-dato w-64 shrink-0 snap-start border border-linea">
             <p class="etiqueta truncate">{{ x.marca }} {{ x.modelo }}</p>

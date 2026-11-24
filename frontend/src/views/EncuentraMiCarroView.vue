@@ -30,8 +30,8 @@ async function terminar() {
   if (r.value.uso === 'destapado') params.despeje_min = 190
   const lista = (await api.get<Paginado<Tarjeta>>('/vehiculos', params as never)).resultados
   if (!lista.length) { resultados.value = []; return }
-  const cmp = await api.post<{ puntajes: { id: number; puntaje: number }[] }>('/comparar', { ids: [...lista].sort((a, b) => (b.puntaje_autoverdict_base || 0) - (a.puntaje_autoverdict_base || 0)).slice(0, 10).map((v) => v.id).concat(lista.length === 1 ? [] : []), ciudad: r.value.ciudad, perfil: PERFIL[r.value.prioridad] })
-    .catch(() => ({ puntajes: lista.map((v) => ({ id: v.id, puntaje: v.puntaje_autoverdict_base || 0 })) }))
+  const cmp = await api.post<{ puntajes: { id: number; puntaje: number }[] }>('/comparar', { ids: [...lista].sort((a, b) => (b.puntaje_miproximocarro_base || 0) - (a.puntaje_miproximocarro_base || 0)).slice(0, 10).map((v) => v.id).concat(lista.length === 1 ? [] : []), ciudad: r.value.ciudad, perfil: PERFIL[r.value.prioridad] })
+    .catch(() => ({ puntajes: lista.map((v) => ({ id: v.id, puntaje: v.puntaje_miproximocarro_base || 0 })) }))
   const pts = new Map(cmp.puntajes.map((p) => [p.id, p.puntaje]))
   const modelos = new Set<string>()
   resultados.value = lista.filter((v) => pts.has(v.id)).sort((a, b) => (pts.get(b.id) || 0) - (pts.get(a.id) || 0))
@@ -56,7 +56,7 @@ const actual = computed(() => PREGUNTAS[paso.value])
 <template>
   <div class="contenedor pagina max-w-4xl">
     <h1 class="titulo-pagina">Encuentra mi carro</h1>
-    <p class="entradilla">Seis preguntas. Cinco recomendaciones explicadas con el Puntaje AutoVerdict.</p>
+    <p class="entradilla">Seis preguntas. Cinco recomendaciones explicadas con el Puntaje MiProximoCarro.</p>
     <div v-if="paso < PREGUNTAS.length" class="tarjeta mt-12 p-6 lg:p-10">
       <p class="etiqueta num">Pregunta {{ paso + 1 }} de {{ PREGUNTAS.length }}</p>
       <div class="mt-3 h-1 bg-linea"><div class="h-1 bg-tinta transition-all" :style="{ width: `${((paso + 1) / PREGUNTAS.length) * 100}%` }" /></div>
@@ -80,7 +80,7 @@ const actual = computed(() => PREGUNTAS[paso.value])
       <div v-for="(x, i) in resultados" :key="x.v.id" class="grid gap-px border border-linea bg-linea md:grid-cols-[1fr_18rem] [&>article]:border-0">
         <TarjetaVehiculo :v="x.v" />
         <div class="celda-dato text-sm">
-          <p class="etiqueta">#{{ i + 1 }} · Puntaje AutoVerdict</p>
+          <p class="etiqueta">#{{ i + 1 }} · Puntaje MiProximoCarro</p>
           <p class="cifra mt-2 lg:text-display-md">{{ x.puntaje }}<span class="text-base font-light tracking-normal text-tenue">/100</span></p>
           <ul class="mt-4 grid gap-2 text-tenue [&>li]:border-t [&>li]:border-linea [&>li]:pt-2"><li v-for="z in x.razones" :key="z">{{ z }}</li></ul>
         </div>

@@ -49,7 +49,7 @@ const panel = ref(false)
 const soloFavoritos = computed(() => route.query.favoritos === '1')
 
 const ORDENES = [
-  { v: 'puntaje', t: 'Puntaje AutoVerdict' }, { v: 'precio_calle', t: 'Precio en calle: menor' }, { v: 'precio_calle_desc', t: 'Precio en calle: mayor' },
+  { v: 'puntaje', t: 'Puntaje MiProximoCarro' }, { v: 'precio_calle', t: 'Precio en calle: menor' }, { v: 'precio_calle_desc', t: 'Precio en calle: mayor' },
   { v: 'potencia', t: 'Potencia' }, { v: 'consumo', t: 'Consumo' }, { v: 'fiabilidad', t: 'Fiabilidad' }, { v: 'despeje', t: 'Despeje' }, { v: 'recientes', t: 'Más recientes' },
 ]
 const factorMoneda = computed(() => (aj.moneda === 'USD' ? aj.trm : 1))

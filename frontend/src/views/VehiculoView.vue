@@ -34,7 +34,7 @@ watch(d, (v) => v && fav.visto(v.id))
 useHead(() => ({
   title: d.value?.nombre || 'Vehículo',
   meta: [
-    { property: 'og:title', content: d.value ? `${d.value.nombre} · AutoVerdict` : 'AutoVerdict' },
+    { property: 'og:title', content: d.value ? `${d.value.nombre} · MiProximoCarro` : 'MiProximoCarro' },
     { property: 'og:description', content: d.value ? `Precio en calle ${f.cop(d.value.precio.puesta_en_calle.total_cop)} · Fiabilidad ${d.value.fiabilidad.puntaje}/10` : '' },
   ],
 }))
