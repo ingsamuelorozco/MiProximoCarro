@@ -22,7 +22,7 @@ def obtener_trm() -> dict[str, Any]:
             return {k: v for k, v in _cache.items() if not k.startswith("_")}
     resultado = {"valor": c["respaldo_cop_por_usd"], "vigencia": c["respaldo_vigencia"], "origen": "respaldo",
                  "fuente_url": c["fuente_url"], "fecha_consulta": c["fecha_consulta"]}
-    if os.getenv("AUTOVERDICT_TRM_OFFLINE", "0") != "1":
+    if os.getenv("MIPROXIMOCARRO_TRM_OFFLINE", "0") != "1":
         try:
             r = httpx.get(c["fuente_url"], params={"$limit": 1, "$order": "vigenciadesde DESC"}, timeout=c["timeout_seg"])
             r.raise_for_status()

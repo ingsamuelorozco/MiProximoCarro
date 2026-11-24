@@ -13,7 +13,7 @@ import yaml
 
 RAIZ = Path(__file__).resolve().parent.parent
 TAMANO_MINIMO_BYTES = 30_000
-AGENTE = "AutoVerdictBot/1.0 (+https://github.com/ingsamuelorozco/AutoVerdict)"
+AGENTE = "MiProximoCarroBot/1.0 (+https://github.com/ingsamuelorozco/MiProximoCarro)"
 
 
 def main() -> int:

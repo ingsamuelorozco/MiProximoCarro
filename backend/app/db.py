@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Iterator
 
 RAIZ = Path(__file__).resolve().parent.parent.parent
-DB_PATH = Path(os.getenv("AUTOVERDICT_DB_PATH", RAIZ / "db" / "cars.db"))
+DB_PATH = Path(os.getenv("MIPROXIMOCARRO_DB_PATH", RAIZ / "db" / "cars.db"))
 if not DB_PATH.is_absolute():
     DB_PATH = RAIZ / DB_PATH
 

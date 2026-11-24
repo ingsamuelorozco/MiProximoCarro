@@ -109,6 +109,6 @@ def asequibilidad(d: AsequibilidadIn) -> dict[str, Any]:
             out.append({**tarjeta(v), "costo_mensual_cop": round(mensual, -3), "holgura_cop": round(presupuesto - mensual, -3),
                         "desglose_mensual": {"cuota": cr["cuota_mensual_con_seguros_cop"], "seguro": round(seg),
                                              "energia": round(energia), "mantenimiento": round(mant)}})
-    out.sort(key=lambda x: (-x["puntaje_autoverdict_base"], -x["holgura_cop"]))
+    out.sort(key=lambda x: (-x["puntaje_miproximocarro_base"], -x["holgura_cop"]))
     return {"presupuesto_mensual_cop": round(presupuesto), "total": len(out), "resultados": out[:d.limite],
             "aviso": "Estimación orientativa; no es una oferta de crédito ni una cotización."}

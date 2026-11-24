@@ -204,7 +204,7 @@ class Sembrador:
         r["retencion_5_anios"] = fia["retencion_valor"]["5"]
         # Campos estimados: todo dato presente que no esté en campos_verificados, más los derivados por regla.
         r["campos_estimados"] = sorted({c for c in CAMPOS_DATO if r.get(c) is not None and c not in verificados} | (derivados - verificados))
-        r["puntaje_autoverdict_base"] = None
+        r["puntaje_miproximocarro_base"] = None
         for k in list(r):
             if k not in VehiculoRegistro.model_fields:
                 raise ValueError(f"campo desconocido: {k}")
@@ -258,9 +258,9 @@ class Sembrador:
     def _posprocesar(self) -> None:
         if self.errores:
             return
-        # Puntaje AutoVerdict base (perfil por defecto, normalizado sobre todo el catálogo).
-        for v, p in zip(self.vehiculos, puntaje.puntaje_autoverdict(self.vehiculos)):
-            v["puntaje_autoverdict_base"] = p["puntaje"]
+        # Puntaje MiProximoCarro base (perfil por defecto, normalizado sobre todo el catálogo).
+        for v, p in zip(self.vehiculos, puntaje.puntaje_miproximocarro(self.vehiculos)):
+            v["puntaje_miproximocarro_base"] = p["puntaje"]
         # Alternativas recomendadas: mismo segmento, ±30% de precio, mejor fiabilidad, otro modelo.
         por_id = {v["id"]: v for v in self.vehiculos}
         for f in self.fiabilidad:

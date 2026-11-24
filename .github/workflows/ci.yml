@@ -15,7 +15,7 @@ jobs:
           python scripts/seed.py --db /tmp/ci.db
           python scripts/verify_data.py
       - run: pytest -q
-        env: { AUTOVERDICT_TRM_OFFLINE: '1' }
+        env: { MIPROXIMOCARRO_TRM_OFFLINE: '1' }
   frontend:
     runs-on: ubuntu-latest
     needs: backend

@@ -1,4 +1,4 @@
-"""Puntaje de fiabilidad (fórmula pública) y Puntaje AutoVerdict por perfil."""
+"""Puntaje de fiabilidad (fórmula pública) y Puntaje MiProximoCarro por perfil."""
 from __future__ import annotations
 
 from typing import Any
@@ -90,7 +90,7 @@ def dimensiones(vehiculos: list[dict[str, Any]]) -> list[dict[str, float | None]
     return res
 
 
-def puntaje_autoverdict(vehiculos: list[dict[str, Any]], perfil: str | None = None) -> list[dict[str, Any]]:
+def puntaje_miproximocarro(vehiculos: list[dict[str, Any]], perfil: str | None = None) -> list[dict[str, Any]]:
     p = cfg("perfiles")
     perfil_id = perfil if perfil in p["perfiles"] else p["perfil_defecto"]
     pesos = p["perfiles"][perfil_id]["pesos"]

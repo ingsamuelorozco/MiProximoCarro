@@ -79,7 +79,7 @@ def main() -> int:
     # 1. Campos obligatorios y reglas por registro
     for v in vs:
         s = v["slug"]
-        nulos = {k for k in VehiculoRegistro.model_fields if v.get(k) is None} - {"id", "puntaje_autoverdict_base"}
+        nulos = {k for k in VehiculoRegistro.model_fields if v.get(k) is None} - {"id", "puntaje_miproximocarro_base"}
         indebidos = nulos - campos_permitidos_nulos(v)
         if indebidos:
             errores.append(f"{s}: campos obligatorios en NULL: {sorted(indebidos)}")
@@ -160,7 +160,7 @@ def main() -> int:
             errores.append(f"Duplicado: {k}")
 
     # 4. Reporte
-    print("=== Reporte de calidad AutoVerdict ===")
+    print("=== Reporte de calidad MiProximoCarro ===")
     print("Cobertura: " + ", ".join(f"{k}={v}" for k, v in cobertura.items()))
     for titulo, clave in (("marca", "marca"), ("segmento", "segmento"), ("combustible", "tipo_combustible"), ("año", "anio")):
         c = Counter(v[clave] for v in vs)

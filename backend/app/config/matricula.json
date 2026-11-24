@@ -9,7 +9,7 @@
     "base": "Avalúo comercial (Guía de Valores; para vehículos nuevos, valor de factura sin IVA)",
     "iva_vehiculos": 0.19,
     "estado_avaluo": "estimado",
-    "nota_avaluo": "Para vehículos nuevos AutoVerdict estima el avalúo como precio de vitrina dividido entre (1 + IVA). Los híbridos tienen IVA reducido y los vehículos de lujo pagan impuesto al consumo adicional: ver metodología.",
+    "nota_avaluo": "Para vehículos nuevos MiProximoCarro estima el avalúo como precio de vitrina dividido entre (1 + IVA). Los híbridos tienen IVA reducido y los vehículos de lujo pagan impuesto al consumo adicional: ver metodología.",
     "rangos_nacionales": [
       {"hasta_cop": 57349000, "tarifa": 0.015},
       {"hasta_cop": 129032000, "tarifa": 0.025},

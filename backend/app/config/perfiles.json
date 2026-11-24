@@ -1,5 +1,5 @@
 {
-  "nota": "Pesos del Puntaje AutoVerdict por perfil de uso. Cada dimensión se normaliza de 0 a 1 entre los autos comparados.",
+  "nota": "Pesos del Puntaje MiProximoCarro por perfil de uso. Cada dimensión se normaliza de 0 a 1 entre los autos comparados.",
   "penalizacion_alerta_roja": 0.35,
   "dimensiones": {
     "costo": "Precio total en calle (menor es mejor)",

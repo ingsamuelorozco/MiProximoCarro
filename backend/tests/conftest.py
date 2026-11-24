@@ -6,8 +6,8 @@ import pytest
 
 RAIZ = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(RAIZ))
-os.environ.setdefault("AUTOVERDICT_TRM_OFFLINE", "1")
-os.environ.setdefault("AUTOVERDICT_RATE_LIMIT", "10000/minute")
+os.environ.setdefault("MIPROXIMOCARRO_TRM_OFFLINE", "1")
+os.environ.setdefault("MIPROXIMOCARRO_RATE_LIMIT", "10000/minute")
 
 
 @pytest.fixture(scope="session")

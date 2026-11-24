@@ -24,7 +24,7 @@ def ciudades() -> dict[str, Any]:
             "defecto": c["ciudad_defecto"], "ciudades": [{"id": k, **v} for k, v in c["ciudades"].items()]}
 
 
-@router.get("/perfiles", summary="Perfiles de uso del Puntaje AutoVerdict")
+@router.get("/perfiles", summary="Perfiles de uso del Puntaje MiProximoCarro")
 def perfiles() -> dict[str, Any]:
     return cfg("perfiles")
 

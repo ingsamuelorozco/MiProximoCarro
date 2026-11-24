@@ -162,7 +162,7 @@ class VehiculoRegistro(BaseModel):
     nivel_costo_mantenimiento: Nivel
     depreciacion_estimada: Depreciacion
     retencion_5_anios: float
-    puntaje_autoverdict_base: Optional[int] = None
+    puntaje_miproximocarro_base: Optional[int] = None
 
     @model_validator(mode="after")
     def _reglas(self) -> "VehiculoRegistro":

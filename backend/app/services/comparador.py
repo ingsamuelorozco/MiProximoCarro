@@ -168,7 +168,7 @@ def comparar(vehiculos: list[dict], ciudad_id: str | None = None, perfil: str | 
                            "ganadores": [vs[i]["id"] for i in gan], "aviso": aviso, "delta": delta,
                            "diferente": len({str(x) for x in valores}) > 1})
         categorias.append({"categoria": nombre, "filas": salida})
-    puntajes = puntaje.puntaje_autoverdict([{**v, "precio_total_en_calle_cop": v["total_calle_cop"]} for v in vs], perfil)
+    puntajes = puntaje.puntaje_miproximocarro([{**v, "precio_total_en_calle_cop": v["total_calle_cop"]} for v in vs], perfil)
     curvas = [{"id": v["id"], **reventa.curva_reventa(v["precio_base_cop"], v.get("retencion_valor"), v.get("depreciacion_estimada"), trm)} for v in vs]
     return {
         "vehiculos": [{k: v.get(k) for k in ("id", "slug", "marca", "modelo", "anio", "version", "carroceria", "segmento",

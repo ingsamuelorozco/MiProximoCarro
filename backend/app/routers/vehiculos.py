@@ -21,7 +21,7 @@ ORDENES = {
     "precio_calle": ("precio_total_en_calle_cop", False), "precio_calle_desc": ("precio_total_en_calle_cop", True),
     "potencia": ("potencia_hp", True), "consumo": ("consumo_real_estimado_kml", True),
     "fiabilidad": ("puntaje_fiabilidad", True), "despeje": ("distancia_libre_suelo_mm", True),
-    "recientes": ("anio", True), "puntaje": ("puntaje_autoverdict_base", True),
+    "recientes": ("anio", True), "puntaje": ("puntaje_miproximocarro_base", True),
 }
 CAMPOS_TARJETA = ("id", "slug", "marca", "modelo", "anio", "version", "segmento", "carroceria", "tipo_combustible",
                   "precio_base_cop", "precio_base_usd", "precio_total_en_calle_cop", "potencia_hp", "torque_nm",
@@ -29,7 +29,7 @@ CAMPOS_TARJETA = ("id", "slug", "marca", "modelo", "anio", "version", "segmento"
                   "capacidad_baul_litros", "plazas", "transmision_tipo", "traccion", "puntaje_fiabilidad",
                   "tiene_alerta_roja", "imagen_id", "estado_comercial", "numero_airbags", "largo_mm", "alto_mm",
                   "distancia_entre_ejes_mm", "voladizo_delantero_mm", "voladizo_trasero_mm", "diametro_rueda_mm",
-                  "indice_garaje_etiqueta", "indice_rompemuelle_etiqueta", "puntaje_autoverdict_base", "pais_origen", "fecha_precio")
+                  "indice_garaje_etiqueta", "indice_rompemuelle_etiqueta", "puntaje_miproximocarro_base", "pais_origen", "fecha_precio")
 
 
 def tarjeta(v: dict) -> dict:
@@ -236,7 +236,7 @@ def ficha(id_o_slug: str, ciudad_id: str | None = Query(None, alias="ciudad"), t
         "nombre": f"{v['marca']} {v['modelo']} {v['anio']} {v['version']}",
         "cabecera": g("segmento", "carroceria", "tipo_combustible", "estado_comercial", "imagen_id", "tiene_alerta_roja",
                       "precio_base_cop", "precio_base_usd", "fecha_precio", "trm_referencia", "pais_origen", "generacion",
-                      "puertas", "plazas", "fecha_lanzamiento_colombia", "puntaje_autoverdict_base"),
+                      "puertas", "plazas", "fecha_lanzamiento_colombia", "puntaje_miproximocarro_base"),
         "alertas": f["alertas"],
         "calidad_dato": {**g("campos_estimados", "confianza_dato", "ultima_verificacion"),
                          "fuentes": [fuentes_por_id().get(x) for x in v["fuentes_ids"] + [v["fuente_precio_id"]]]},

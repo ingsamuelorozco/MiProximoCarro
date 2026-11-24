@@ -1,4 +1,4 @@
-"""AutoVerdict API — FastAPI con CORS, GZip, ETag, rate limit y errores con formato único."""
+"""MiProximoCarro API — FastAPI con CORS, GZip, ETag, rate limit y errores con formato único."""
 from __future__ import annotations
 
 import hashlib
@@ -20,11 +20,11 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from .db import DB_PATH, uno
 from .routers import actualizados, catalogo, comparar, config, financiero, fiabilidad, vehiculos
 
-LIMITE = os.getenv("AUTOVERDICT_RATE_LIMIT", "120/minute")
+LIMITE = os.getenv("MIPROXIMOCARRO_RATE_LIMIT", "120/minute")
 limiter = Limiter(key_func=get_remote_address, default_limits=[LIMITE])
 
 app = FastAPI(
-    title="AutoVerdict API",
+    title="MiProximoCarro API",
     version="1.0.0",
     description="La verdad completa sobre un carro antes de pagarlo: dimensiones reales, costo real en Colombia y fiabilidad.",
     docs_url="/docs",
@@ -34,7 +34,7 @@ app.add_middleware(SlowAPIMiddleware)
 app.add_middleware(GZipMiddleware, minimum_size=800)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[o.strip() for o in os.getenv("AUTOVERDICT_CORS_ORIGINS", "http://localhost:5173").split(",") if o.strip()],
+    allow_origins=[o.strip() for o in os.getenv("MIPROXIMOCARRO_CORS_ORIGINS", "http://localhost:5173").split(",") if o.strip()],
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
