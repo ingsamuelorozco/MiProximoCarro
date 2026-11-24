@@ -4,9 +4,9 @@ Consultadas el 2026-11-13. El registro vive en `data/fuentes.yaml` y en la tabla
 
 | Id | Tipo | Fuente |
 | --- | --- | --- |
-| editorial-referencia | editorial | [Base editorial AutoVerdict: fichas técnicas públicas recopiladas, pendientes de contraste con la ficha vigente en Colombia](https://github.com/ingsamuelorozco/AutoVerdict/blob/main/docs/METODOLOGIA.md) |
-| editorial-precio | editorial | [Estimación editorial AutoVerdict del precio de vitrina 2026 (rango de mercado; no es cotización)](https://github.com/ingsamuelorozco/AutoVerdict/blob/main/docs/METODOLOGIA.md#precios) |
-| editorial-mantenimiento | editorial | [Criterio editorial AutoVerdict sobre mantenimiento preventivo y desgaste normal](https://github.com/ingsamuelorozco/AutoVerdict/blob/main/docs/METODOLOGIA.md#fiabilidad) |
+| editorial-referencia | editorial | [Base editorial MiProximoCarro: fichas técnicas públicas recopiladas, pendientes de contraste con la ficha vigente en Colombia](https://github.com/ingsamuelorozco/MiProximoCarro/blob/main/docs/METODOLOGIA.md) |
+| editorial-precio | editorial | [Estimación editorial MiProximoCarro del precio de vitrina 2026 (rango de mercado; no es cotización)](https://github.com/ingsamuelorozco/MiProximoCarro/blob/main/docs/METODOLOGIA.md#precios) |
+| editorial-mantenimiento | editorial | [Criterio editorial MiProximoCarro sobre mantenimiento preventivo y desgaste normal](https://github.com/ingsamuelorozco/MiProximoCarro/blob/main/docs/METODOLOGIA.md#fiabilidad) |
 | latin-ncap | NCAP | [Latin NCAP — resultados de evaluaciones](https://www.latinncap.com/es/resultados) |
 | euro-ncap | NCAP | [Euro NCAP — resultados de evaluaciones](https://www.euroncap.com/es/resultados) |
 | fasecolda-guia | Fasecolda | [Fasecolda — Guía de Valores](https://www.fasecolda.com/guia-de-valores/) |

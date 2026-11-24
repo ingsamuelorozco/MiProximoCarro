@@ -1,7 +1,7 @@
-# Plan de ejecución — AutoVerdict
+# Plan de ejecución — MiProximoCarro
 
-Repositorio: https://github.com/ingsamuelorozco/AutoVerdict (cuenta personal `ingsamuelorozco`, público).
-Nota: el repositorio ya existía con el nombre `AutoVerdict`; se usa ese en lugar de `autoverdict-pro-comparator`.
+Repositorio: https://github.com/ingsamuelorozco/MiProximoCarro (cuenta personal `ingsamuelorozco`, público).
+Nota: el proyecto arrancó como `AutoVerdict` y se renombró a `MiProximoCarro` (el repo de GitHub también cambió de nombre).
 
 | Hito | Entregable | Criterios de aceptación | Commit |
 | --- | --- | --- | --- |

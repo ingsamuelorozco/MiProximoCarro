@@ -17,7 +17,7 @@ Puntaje = 35% motor y transmisión + 20% quejas documentadas + 15% repuestos y r
 - TCO: energía, mantenimiento por hitos de 10.000 km, seguro, SOAT, impuesto (sobre avalúo depreciado), RTM desde el año 6, intereses, menos la reventa.
 - Altura: −10% por cada 1.000 m en atmosféricos, −3% en turbo, 0% en eléctricos.
 - Índices Rompemuelle y de Garaje: umbrales en `backend/app/config/indices.json`.
-- Puntaje AutoVerdict: dimensiones normalizadas entre los autos comparados, ponderadas por perfil (`perfiles.json`); la alerta roja resta 35%.
+- Puntaje MiProximoCarro: dimensiones normalizadas entre los autos comparados, ponderadas por perfil (`perfiles.json`); la alerta roja resta 35%.
 
 ## Límites
 Siluetas esquemáticas, no el diseño real. Las reglas de pico y placa y la matrícula fuera de Bogotá son ilustrativas. No es una cotización ni una oferta de crédito.

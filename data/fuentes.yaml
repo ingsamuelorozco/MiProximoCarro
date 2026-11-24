@@ -2,18 +2,18 @@
 # tipo: fabricante | NCAP | Fasecolda | SIC | prensa | foro | taller | mercado | oficial | editorial
 fuentes:
   - id: editorial-referencia
-    titulo: "Base editorial AutoVerdict: fichas técnicas públicas recopiladas, pendientes de contraste con la ficha vigente en Colombia"
-    url: "https://github.com/ingsamuelorozco/AutoVerdict/blob/main/docs/METODOLOGIA.md"
+    titulo: "Base editorial MiProximoCarro: fichas técnicas públicas recopiladas, pendientes de contraste con la ficha vigente en Colombia"
+    url: "https://github.com/ingsamuelorozco/MiProximoCarro/blob/main/docs/METODOLOGIA.md"
     tipo: editorial
     fecha_consulta: 2026-11-13
   - id: editorial-precio
-    titulo: "Estimación editorial AutoVerdict del precio de vitrina 2026 (rango de mercado; no es cotización)"
-    url: "https://github.com/ingsamuelorozco/AutoVerdict/blob/main/docs/METODOLOGIA.md#precios"
+    titulo: "Estimación editorial MiProximoCarro del precio de vitrina 2026 (rango de mercado; no es cotización)"
+    url: "https://github.com/ingsamuelorozco/MiProximoCarro/blob/main/docs/METODOLOGIA.md#precios"
     tipo: editorial
     fecha_consulta: 2026-11-13
   - id: editorial-mantenimiento
-    titulo: "Criterio editorial AutoVerdict sobre mantenimiento preventivo y desgaste normal"
-    url: "https://github.com/ingsamuelorozco/AutoVerdict/blob/main/docs/METODOLOGIA.md#fiabilidad"
+    titulo: "Criterio editorial MiProximoCarro sobre mantenimiento preventivo y desgaste normal"
+    url: "https://github.com/ingsamuelorozco/MiProximoCarro/blob/main/docs/METODOLOGIA.md#fiabilidad"
     tipo: editorial
     fecha_consulta: 2026-11-13
   - id: latin-ncap
